@@ -65,6 +65,7 @@ public extension SymbolButton {
 
 		public static let normal = Style(backgroundColor: .clear, color: .label)
 		public static let selected = Style(backgroundColor: .label, color: .systemBackground)
+		public static let disabled = Style(backgroundColor: .clear, color: UIColor.label.withAlphaComponent(0.5))
 	}
 }
 

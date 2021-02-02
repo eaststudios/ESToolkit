@@ -58,7 +58,7 @@ extension FloatingView {
 		public let corners: Corners
 		public let shadow: Shadow
 
-		init(background: Background, corners: Corners, shadow: Shadow) {
+		public init(background: Background, corners: Corners, shadow: Shadow) {
 			self.background = background
 			self.corners = corners
 			self.shadow = shadow

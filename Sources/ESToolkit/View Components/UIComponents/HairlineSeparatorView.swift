@@ -43,7 +43,7 @@ public extension HairlineSeparatorView {
 			self.color = color
 		}
 
-		static let `default` = Style(color: .opaqueSeparator)
+		public static let `default` = Style(color: .opaqueSeparator)
 	}
 }
 

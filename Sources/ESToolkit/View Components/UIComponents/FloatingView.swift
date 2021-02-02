@@ -58,6 +58,12 @@ extension FloatingView {
 		public let corners: Corners
 		public let shadow: Shadow
 
+		init(background: Background, corners: Corners, shadow: Shadow) {
+			self.background = background
+			self.corners = corners
+			self.shadow = shadow
+		}
+
 		public enum Background {
 			case blur(UIBlurEffect)
 			case color(UIColor)

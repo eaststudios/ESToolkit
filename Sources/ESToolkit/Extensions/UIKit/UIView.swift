@@ -24,8 +24,6 @@ public extension UIView {
 	}
 
 	public func embedSubview(_ subview: UIView, inset: CGFloat = 0) {
-		translatesAutoresizingMaskIntoConstraints = false
-
 		addSubview(subview)
 		subview.layout(with: [
 			subview.leadingAnchor.constraint(equalTo: leadingAnchor, constant: inset),

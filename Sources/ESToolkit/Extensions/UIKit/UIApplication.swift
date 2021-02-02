@@ -8,19 +8,24 @@
 import UIKit
 
 public extension UIApplication {
+	/// Open URL
+	/// - Parameter url: URL to open
 	public func open(_ url: URL) {
 		open(url, options: [:], completionHandler: nil)
 	}
 
+	/// Version number
 	public var version: String {
 		return (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? "0.0"
 	}
 
+	/// Build number
 	public var build: String {
 		return (Bundle.main.infoDictionary?["CFBundleVersion"] as? String) ?? "0000"
 	}
 
-	public var appIcon: UIImage? {
+	/// The app's icon
+	public var icon: UIImage? {
 		guard let iconsDictionary = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String: Any],
 			let primaryIconsDictionary = iconsDictionary["CFBundlePrimaryIcon"] as? [String: Any],
 			let iconFiles = primaryIconsDictionary["CFBundleIconFiles"] as? [String],

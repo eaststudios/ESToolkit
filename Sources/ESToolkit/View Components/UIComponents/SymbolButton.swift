@@ -46,12 +46,22 @@ public extension SymbolButton {
 			}
 		}
 
+		public init(image: Symbol, onTap: (() -> Void)?) {
+			self.image = image
+			self.onTap = onTap
+		}
+
 		public static let initial = ViewModel(image: .uiImage(.init()), onTap: nil)
 	}
 
 	public struct Style {
 		public let backgroundColor: UIColor
 		public let color: UIColor
+
+		public init(backgroundColor: UIColor, color: UIColor) {
+			self.backgroundColor = backgroundColor
+			self.color = color
+		}
 
 		public static let normal = Style(backgroundColor: .clear, color: .label)
 		public static let selected = Style(backgroundColor: .label, color: .systemBackground)

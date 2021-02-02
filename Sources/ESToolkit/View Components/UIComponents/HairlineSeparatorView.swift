@@ -28,11 +28,20 @@ public extension HairlineSeparatorView {
 		public let width: CGFloat
 		public let direction: NSLayoutConstraint.Axis
 
+		public init(width: CGFloat, direction: NSLayoutConstraint.Axis) {
+			self.width = width
+			self.direction = direction
+		}
+
 		static let initial = ViewModel(width: 1, direction: .horizontal)
 	}
 
 	public struct Style {
 		public let color: UIColor
+
+		public init(color: UIColor) {
+			self.color = color
+		}
 
 		static let `default` = Style(color: .opaqueSeparator)
 	}

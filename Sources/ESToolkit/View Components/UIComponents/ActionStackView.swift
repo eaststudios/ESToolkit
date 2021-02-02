@@ -33,12 +33,21 @@ public extension ActionStackView {
 	public struct ViewModel {
 		public let actions: [UIView]
 
+		public init(actions: [UIView]) {
+			self.actions = actions
+		}
+
 		public static let initial = ViewModel(actions: [])
 	}
 
 	public struct Style {
 		public let axis: NSLayoutConstraint.Axis
 		public let separator: HairlineSeparatorView.Style
+
+		public init(axis: NSLayoutConstraint.Axis, separator: HairlineSeparatorView.Style) {
+			self.axis = axis
+			self.separator = separator
+		}
 
 		public static let `default` = Style(axis: .vertical, separator: .default)
 	}

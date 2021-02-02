@@ -46,6 +46,10 @@ extension FloatingView {
 	public struct ViewModel {
 		public let contentView: UIView
 
+		public init(contentView: UIView) {
+			self.contentView = contentView
+		}
+
 		public static let initial = ViewModel(contentView: UIView())
 	}
 
@@ -74,6 +78,13 @@ extension FloatingView {
 			public let opacity: CGFloat
 			public let offset: CGSize
 			public let radius: CGFloat
+
+			public init(color: UIColor, opacity: CGFloat, offset: CGSize, radius: CGFloat) {
+				self.color = color
+				self.opacity = opacity
+				self.offset = offset
+				self.radius = radius
+			}
 		}
 
 		public static let `default` = Style(

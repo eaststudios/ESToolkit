@@ -8,6 +8,16 @@
 import UIKit
 
 public extension UIView {
+	public var cornerRadius: CGFloat {
+		get {
+			return layer.cornerRadius
+		}
+		set {
+			clipsToBounds = newValue > 0
+			layer.cornerRadius = newValue
+		}
+	}
+
 	public func layout(with constraints: [NSLayoutConstraint]) {
 		translatesAutoresizingMaskIntoConstraints = false
 		NSLayoutConstraint.activate(constraints)

@@ -11,15 +11,15 @@ public protocol UIComponentProtocol: UIView {
 	associatedtype ViewModel
 	associatedtype Style
 
-	public var viewModel: ViewModel { get set }
-	public var style: Style { get set }
+	var viewModel: ViewModel { get set }
+	var style: Style { get set }
 
 	/// Set up the subviews and the basic layout
-	private func commonInit()
+	func commonInit()
 	/// Update the contents, should be fired every time `viewModel` is changed.
-	private func render()
+	func render()
 	/// Update the styles, should be fired every time `style` is changed.
-	private func applyStyle()
+	func applyStyle()
 }
 
 public extension UIComponentProtocol {

@@ -32,21 +32,21 @@ public extension SymbolButton {
 		public let image: Symbol
 		public let onTap: (() -> Void)?
 
-		indirect enum Symbol {
-			case image(UIImage)
+		public enum Symbol {
+			case uiImage(UIImage)
 			case symbolName(String)
 
-			var image: UIImage? {
+			fileprivate var image: UIImage? {
 				switch self {
-				case .image(let image):
-					return image
+				case .uiImage(let uiImage):
+					return uiImage
 				case .symbolName(let symbolName):
 					return UIImage(systemName: symbolName)
 				}
 			}
 		}
 
-		public static let initial = ViewModel(image: .image(.init()), onTap: nil)
+		public static let initial = ViewModel(image: .uiImage(.init()), onTap: nil)
 	}
 
 	public struct Style {

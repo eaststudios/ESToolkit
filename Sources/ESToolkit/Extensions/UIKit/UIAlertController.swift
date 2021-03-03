@@ -9,7 +9,7 @@ import UIKit
 
 public extension UIAlertController {
 	public convenience init(error: Error, preferredStyle: UIAlertController.Style = .alert) {
-		self.init(title: (error as NSError).description , message: nil, preferredStyle: preferredStyle)
+		self.init(title: error.localizedDescription, message: nil, preferredStyle: preferredStyle)
 	}
 
 	public convenience init(title: String?, action: UIAlertAction? = nil) {
